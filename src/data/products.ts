@@ -1,5 +1,5 @@
 // Vesper AgriTech Products Data
-// Structured per AllyNav categories
+// Structured per Vesper categories
 
 export interface Product {
   id: string
@@ -72,7 +72,7 @@ export const products: Product[] = [
     code: 'AF718',
     name: 'Autosteering System',
     nameCn: '自动转向系统',
-    description: 'The AF718 is AllyNav\'s next-generation high-performance autosteering system. Powered by an advanced computing platform, it significantly enhances accuracy and efficiency across diverse farming operations.',
+    description: 'The AF718 is Vesper\'s next-generation high-performance autosteering system. Powered by an advanced computing platform, it significantly enhances accuracy and efficiency across diverse farming operations.',
     descriptionCn: 'AF718前沿 — 开创智慧农业新未来。基于先进计算平台的高性能自动转向系统，显著提升多样化农业作业的精度和效率。',
     category: 'precision-agriculture',
     categoryName: 'Precision Agriculture',
@@ -160,7 +160,7 @@ export const products: Product[] = [
       },
       {
         title: 'Seamless Data Integration and Transfer',
-        description: 'The AllyNav software ecosystem enables smooth data exchange across AIAgripro, AIFarm, and AIFMS. It maintains compatibility with other major brands and also supports integration with the xFarm platform, helping users meet agricultural subsidy compliance requirements.',
+        description: 'The Vesper software ecosystem enables smooth data exchange across AIAgripro, AIFarm, and AIFMS. It maintains compatibility with other major brands and also supports integration with the xFarm platform, helping users meet agricultural subsidy compliance requirements.',
         image: '/images/af718/Seamless-Data-Integration-and-Transfer.png'
       },
       {
@@ -175,7 +175,7 @@ export const products: Product[] = [
       },
       {
         title: 'One System, Multiple Scenarios',
-        description: 'Centered on the AF718, AllyNav has built a complete precision agriculture ecosystem. With this core hardware as the foundation, the system supports diverse functions such as spraying, seeding, and fertilizing, and can be flexibly applied across different farmland environments and operational scenarios.',
+        description: 'Centered on the AF718, Vesper has built a complete precision agriculture ecosystem. With this core hardware as the foundation, the system supports diverse functions such as spraying, seeding, and fertilizing, and can be flexibly applied across different farmland environments and operational scenarios.',
         image: '/images/af718/One-System-Multiple-Scenarios.png'
       }
     ],
@@ -242,7 +242,7 @@ export const products: Product[] = [
     },
     faqs: [
       { question: 'Does this system support satellite differential mode for high accuracy without an internet connection?', answer: 'Yes, this feature is available. Our receivers can be equipped with different models of GNSS boards, one of which can support broadcasting differential corrections via satellite, achieving accuracy similar to network or radio base station corrections even without internet connectivity.' },
-      { question: 'Does the system support ISOBUS?', answer: 'Yes. AllyNav has obtained AEF certification. The system supports UT and TC (Task Control). Note: The TC function requires a paid activation, while the UT function is available for free.' },
+      { question: 'Does the system support ISOBUS?', answer: 'Yes. Vesper has obtained AEF certification. The system supports UT and TC (Task Control). Note: The TC function requires a paid activation, while the UT function is available for free.' },
       { question: 'Does the system have terrain compensation for operating on sloped land?', answer: 'Yes. The GNSS receiver is equipped with a high-precision gyroscope for accurate attitude measurement, and the software includes a slope correction function to compensate for terrain variations during operation.' }
     ],
     learnMoreCards: [
@@ -359,7 +359,7 @@ export const products: Product[] = [
       },
       {
         title: 'Highly Expandable',
-        description: 'Modular design supports future upgrades including section control, variable rate application, and integration with the AllyNav precision agriculture ecosystem.',
+        description: 'Modular design supports future upgrades including section control, variable rate application, and integration with the Vesper precision agriculture ecosystem.',
         image: '/images/isobus/Highly-Expandable.jpg'
       },
       {
@@ -521,7 +521,7 @@ export const products: Product[] = [
       'TERRAIN SURVEY & DESIGN'
     ],
     whyReasons: [
-      'Developed by AllyNav, the W20 Intelligent GNSS Land Leveling System is a high-precision alternative to traditional laser leveling',
+      'Developed by Vesper, the W20 Intelligent GNSS Land Leveling System is a high-precision alternative to traditional laser leveling',
       'Compatible with land levelers, scrapers, bulldozers, and graders, offering precise guidance and automated blade control for optimal performance',
       'Minimizes operator fatigue and skill requirements, ensuring accurate results in farmland leveling and paddy field transformation',
       'Ideal for land reclamation, site preparation, and roadbed work where high surface flatness is essential',
@@ -640,7 +640,7 @@ export const products: Product[] = [
     code: 'Aries300N',
     name: 'Orchard Spraying Robot',
     nameCn: '果园喷洒机器人',
-    description: 'Aries300N Smart Sprayer delivers GNSS-guided, hybrid spraying for orchards. Ensures full coverage, cuts labor, and works smarter with AllyNav.',
+    description: 'Aries300N Smart Sprayer delivers GNSS-guided, hybrid spraying for orchards. Ensures full coverage, cuts labor, and works smarter with Vesper.',
     descriptionCn: 'Aries300N 智能喷雾机器人提供 GNSS 导航、混合动力的果园喷洒方案，确保全面覆盖、减少人工。',
     category: 'agricultural-robotics',
     categoryName: 'Agricultural Robots',

@@ -385,7 +385,7 @@ function getAppImage(appName: string): string | undefined {
 }
 
 function getBadges(product: Product): string[] {
-  // Products with AllyNav badge-style features (short labels, not descriptive text)
+  // Products with Vesper badge-style features (short labels, not descriptive text)
   const badgeStyleProducts = ['AF718', 'W20']
   if (badgeStyleProducts.includes(product.code)) {
     return product.features

@@ -3,40 +3,40 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-// AllyNav产品URL列表
+// Vesper产品URL列表
 const productUrls = [
   // Precision Agriculture
-  'https://www.allynav.com/product/af718-autosteering-system/',
-  'https://www.allynav.com/product/af305-automated-steering-system/',
-  'https://www.allynav.com/product/af303-automated-steering-system/',
-  'https://www.allynav.com/product/af302-automated-steering-system/',
-  'https://www.allynav.com/product/af201-hydraulic-automated-steering-system/',
-  'https://www.allynav.com/product/af100-assisted-guidance-system/',
-  'https://www.allynav.com/product/vs100-spray-control-system/',
-  'https://www.allynav.com/product/vf200-seeding-and-fertilisation-control/',
-  'https://www.allynav.com/product/w20-land-leveling-system/',
-  'https://www.allynav.com/product/isobus-terminal/',
+  'https://www.Vesper.com/product/af718-autosteering-system/',
+  'https://www.Vesper.com/product/af305-automated-steering-system/',
+  'https://www.Vesper.com/product/af303-automated-steering-system/',
+  'https://www.Vesper.com/product/af302-automated-steering-system/',
+  'https://www.Vesper.com/product/af201-hydraulic-automated-steering-system/',
+  'https://www.Vesper.com/product/af100-assisted-guidance-system/',
+  'https://www.Vesper.com/product/vs100-spray-control-system/',
+  'https://www.Vesper.com/product/vf200-seeding-and-fertilisation-control/',
+  'https://www.Vesper.com/product/w20-land-leveling-system/',
+  'https://www.Vesper.com/product/isobus-terminal/',
   
   // Agricultural Robotics
-  'https://www.allynav.com/product/taurus80e-smart-lawn-mowing-robot/',
-  'https://www.allynav.com/product/aries300n-orchard-spraying-robot/',
+  'https://www.Vesper.com/product/taurus80e-smart-lawn-mowing-robot/',
+  'https://www.Vesper.com/product/aries300n-orchard-spraying-robot/',
   
   // Geospatial Solutions
-  'https://www.allynav.com/product/r26-pro-gnss-receiver/',
-  'https://www.allynav.com/product/r90-laser-ar-rtk/',
-  'https://www.allynav.com/product/r10-gnss-receiver/',
-  'https://www.allynav.com/product/r27-gnss-receiver/',
-  'https://www.allynav.com/product/r61-gnss-receiver/',
-  'https://www.allynav.com/product/d32-high-efficient-radio-modem/',
+  'https://www.Vesper.com/product/r26-pro-gnss-receiver/',
+  'https://www.Vesper.com/product/r90-laser-ar-rtk/',
+  'https://www.Vesper.com/product/r10-gnss-receiver/',
+  'https://www.Vesper.com/product/r27-gnss-receiver/',
+  'https://www.Vesper.com/product/r61-gnss-receiver/',
+  'https://www.Vesper.com/product/d32-high-efficient-radio-modem/',
   
   // Livestock Management
-  'https://www.allynav.com/product/smart-collar-livestock-management-system/',
+  'https://www.Vesper.com/product/smart-collar-livestock-management-system/',
   
   // Machine Control
-  'https://www.allynav.com/product/egs101-intelligent-excavator-guidance-system/',
+  'https://www.Vesper.com/product/egs101-intelligent-excavator-guidance-system/',
   
   // AllyLink Service
-  'https://www.allynav.com/product/allylink-service/'
+  'https://www.Vesper.com/product/allylink-service/'
 ];
 
 // 产品信息映射
@@ -100,7 +100,7 @@ async function scrapeProductImages() {
   const page = await context.newPage();
   
   // 创建图片目录
-  const imagesDir = path.join(__dirname, '..', 'public', 'images', 'allynav');
+  const imagesDir = path.join(__dirname, '..', 'public', 'images', 'Vesper');
   if (!fs.existsSync(imagesDir)) {
     fs.mkdirSync(imagesDir, { recursive: true });
   }
@@ -134,7 +134,7 @@ async function scrapeProductImages() {
         'img.attachment-full',
         'img.product-image',
         'img[src*="product"]',
-        'img[src*="allynav"]',
+        'img[src*="Vesper"]',
         'img:first-of-type'
       ];
       
@@ -155,7 +155,7 @@ async function scrapeProductImages() {
         await page.screenshot({ path: screenshotPath, fullPage: false });
         scrapedProducts.push({
           ...info,
-          imagePath: `/images/allynav/${info.code.toLowerCase().replace(/\s+/g, '-')}.png`,
+          imagePath: `/images/Vesper/${info.code.toLowerCase().replace(/\s+/g, '-')}.png`,
           sourceUrl: url
         });
         continue;
@@ -171,7 +171,7 @@ async function scrapeProductImages() {
         
         scrapedProducts.push({
           ...info,
-          imagePath: `/images/allynav/${imageFilename}`,
+          imagePath: `/images/Vesper/${imageFilename}`,
           sourceUrl: url
         });
       } catch (error) {
