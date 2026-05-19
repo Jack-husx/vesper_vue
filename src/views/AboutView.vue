@@ -29,7 +29,7 @@
           :src="getImageUrl('about', 'hero')" 
           alt="Vesper AgriTech - About Us"
           class="hero-img"
-          @error="(e) => e.target.src = images.fallback.about.hero"
+          @error="(e) => handleImageError(e, images.fallback.about.hero)"
         />
         <div class="hero-overlay" v-motion-slide-visible-bottom :delay="200">
           <h1 class="hero-title">Bridging China's Intelligent Hardware Technology with Australia Agriculture</h1>
@@ -58,7 +58,7 @@
             <img 
               :src="getImageUrl('about', 'intro')" 
               alt="Agricultural Technology"
-              @error="(e) => e.target.src = images.fallback.about.intro"
+              @error="(e) => handleImageError(e, images.fallback.about.intro)"
             />
           </div>
         </div>
@@ -112,7 +112,7 @@
               <img 
                 :src="getImageUrl('about', 'team')" 
                 alt="Mr. Gan - Founder & CEO of Vesper AgriTech"
-                @error="(e) => e.target.src = images.fallback.about.team"
+                @error="(e) => handleImageError(e, images.fallback.about.team)"
               />
             </div>
             <div class="team-info">
@@ -203,20 +203,27 @@ const current = ref<string[]>(['about'])
 const logoError = ref(false)
 const footerLogoError = ref(false)
 
-// 图片配置 - 使用public目录中的图片
+// 图片配置 - 使用 public 目录中实际存在的文件（已优化为 .webp）
 const images = {
   about: {
-    hero: '/images/AM2A1835.JPG',
-    intro: '/images/agriculture-6502282.jpg',
-    team: '/images/Mr. Gan the Founder.png'  // Mr. Gan的照片
+    hero: '/images/pexels-nc-farm-bureau-mark-2889442.webp',
+    intro: '/images/agriculture-6502282.webp',
+    team: '/images/Mr. Gan the Founder.png'
   },
   fallback: {
     about: {
-      hero: '/images/AM2A1835.JPG',
-      intro: '/images/agriculture-6502282.jpg',
+      hero: '/images/3U9A0093.webp',
+      intro: '/images/harvest-1543064.webp',
       team: '/images/Mr. Gan the Founder.png'
     }
   }
+}
+
+const handleImageError = (e: Event, fallback: string) => {
+  const img = e.target as HTMLImageElement
+  if (img.dataset.fallbackUsed) return
+  img.dataset.fallbackUsed = 'true'
+  img.src = fallback
 }
 
 // 获取图片URL
