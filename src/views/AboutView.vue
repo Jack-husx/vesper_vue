@@ -332,6 +332,8 @@ const stats = [
 <style scoped>
 .about {
   font-family: 'Noto Sans', 'Noto Sans SC', 'Inter', sans-serif;
+  overflow: clip;
+  contain: layout style;
 }
 
 /* Hero Section */
@@ -670,22 +672,7 @@ const stats = [
   background: #f8f9fa;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-title {
-  font-size: clamp(28px, 3vw, 36px);
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  font-size: clamp(16px, 1.5vw, 18px);
-  color: #666;
-}
+/* .section-header, .section-title, .section-subtitle already defined above */
 
 .stats-grid {
   display: grid;
